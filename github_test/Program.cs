@@ -7,7 +7,10 @@
             Console.WriteLine("Введите первое число:");
             var firstNumber = Convert.ToDouble(Console.ReadLine());
 
-            Console.WriteLine("Выберите команду: \n" + "1. Сложить числа \n" + "2. Вычесть числа \n");
+            Console.WriteLine("Выберите команду: \n" +
+                              "1. Сложить числа \n" +
+                              "2. Вычесть числа \n" +
+                              "3. Умножить числа \n");
 
             var choice = Convert.ToInt32(Console.ReadLine());
         
@@ -26,6 +29,12 @@
                 {
                     var difference = firstNumber - secondNumber;
                     Console.WriteLine("Результат вычитания: " + difference);
+                    break;
+                }
+                case 3:
+                {
+                    var multiplication = firstNumber * secondNumber;
+                    Console.WriteLine("Результат умножения: " + multiplication);
                     break;
                 }
             }
