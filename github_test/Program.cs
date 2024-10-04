@@ -18,35 +18,40 @@
             Console.WriteLine("Введите второе число:");
             var secondNumber = Convert.ToDouble(Console.ReadLine());
 
-            switch (choice)
-            {
-                case 1:
-                {
-                    var sum = firstNumber + secondNumber;
-                    Console.WriteLine("Результат сложения: " + sum);
-                    break;
-                }
-                case 2:
-                {
-                    var difference = firstNumber - secondNumber;
-                    Console.WriteLine("Результат вычитания: " + difference);
-                    break;
-                }
-                case 3:
-                {
-                    var multiplication = firstNumber * secondNumber;
-                    Console.WriteLine("Результат умножения: " + multiplication);
-                    break;
-                }
-                case 4:
-                {
-                    var quotient = firstNumber + secondNumber;
-                    Console.WriteLine("Результат деления: " + quotient);
-                    break;
-                }
-            }
+            CalculateOperation(choice, firstNumber, secondNumber);
             
         }
         
+    }
+
+    private static void CalculateOperation(int choice, double firstNumber, double secondNumber)
+    {
+        switch (choice)
+        {
+            case 1:
+            {
+                var sum = firstNumber + secondNumber;
+                Console.WriteLine("Результат сложения: " + sum);
+                break;
+            }
+            case 2:
+            {
+                var difference = firstNumber - secondNumber;
+                Console.WriteLine("Результат вычитания: " + difference);
+                break;
+            }
+            case 3:
+            {
+                var multiplication = firstNumber * secondNumber;
+                Console.WriteLine("Результат умножения: " + multiplication);
+                break;
+            }
+            case 4:
+            {
+                var quotient = firstNumber + secondNumber;
+                Console.WriteLine("Результат деления: " + quotient);
+                break;
+            }
+        }
     }
 }
